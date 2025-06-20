@@ -1,0 +1,36 @@
+---
+import Introduction from './components/Introduction.astro';
+import CallToAction from './components/CallToAction.astro';
+import SocialMedia from './components/SocialMedia.astro';
+import HeroArt from './components/HeroArt.astro';
+
+const socialLinks = [
+  {
+    name: "GitHub",
+    url: "https://github.com/aandresam",
+    icon: "github"
+  },
+  {
+    name: "LinkedIn", 
+    url: "https://linkedin.com/in/aandresam",
+    icon: "linkedin"
+  }
+];
+---
+<!-- Hero Section -->
+<section id="home" class="pt-24 pb-16 px-4 min-h-screen flex items-center">
+    <div class="container mx-auto max-w-6xl">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+            <div class="space-y-8 animate-fade-in">
+                <Introduction />
+
+                <CallToAction />
+
+                <SocialMedia socialLinks={socialLinks} />
+            </div>
+            
+            <HeroArt />
+        </div>
+    </div>
+</section>
