@@ -7,35 +7,48 @@ const experiences = [
     title: "Tecnólogo ADSI",
     company: "SENA Regional Guaviare",
     period: "Feb 2021 - Nov 2023",
-    description: "Formación en desarrollo de software, bases de datos y metodologías ágiles.",
-    type: "education"
+    description: "Durante mi formación, me destaqué por ser responsable, disciplinado y autodidacta. Mi alto \
+                  rendimiento me permitió participar en un proyecto del SENA, brindando soporte a un software de \
+                  votaciones en MySQL para garantizar la integridad de los datos. Además, recibí dos \
+                  reconocimientos por rendimiento académico.",
+    type: "education",
   },
   {
     title: "Desarrollador full stack",
     company: "Algorithm S.A.S",
     period: "Mar 2023 - Enero 2024",
-    description: "Desarrollo de APIs REST con ASP.NET Core y aplicaciones frontend con Angular. Optimización de consultas SQL y mejora del rendimiento de aplicaciones existentes.",
+    description: "En Algoritmo del Futuro, he desarrollado habilidades técnicas y blandas participando en proyectos \
+                  de automatización. Destaco mi trabajo en una plataforma CRM para gestionar horarios y en un \
+                  software de fijación de precios, donde optimicé y amplié funcionalidades. Utilicé C# y .NET Core \
+                  (backend), Angular (frontend), SQL Server (BD) y Git/GitHub o Azure Repos (control de \
+                  versiones).",
     type: "work"
   },
   {
     title: "Ingeniería en Sistemas",
     company: "CUN - Corporación Unificada Nacional de Educación Superior",
     period: "Feb 2024 - Presente",
-    description: "Título en Ingeniería en Sistemas con especialización en desarrollo de software y bases de datos. Proyecto de tesis enfocado en aplicaciones web empresariales.",
+    description: "Tuve la oportunidad de homologar mi tecnólogo ADSI del SENA, iniciando mis estudios desde el 8vo \
+                  semestre. Actualmente me encuentro en el 10 semestre de ingeniería en sistemas.",
     type: "education"
   },
   {
     title: "Desarrollador full stack",
     company: "Proyecto personal",
     period: "Sep 2024 - Mar 2025",
-    description: "Desarrollo de APIs REST con ASP.NET Core y aplicaciones frontend con Angular. Optimización de consultas SQL y mejora del rendimiento de aplicaciones existentes.",
+    description: "Desarrollé un software CRM para la gestión de leads usando Angular y NestJS con Mongoose.\
+                  Me encargué del backend, parte del frontend y la integración con servicios en la nube como \
+                  Cloudinary para almacenar imágenes y PDF. El sistema permite registrar leads de forma masiva \
+                  y administrar usuarios comerciales y sus servicios, facilitando el seguimiento y conversión de prospectos.",
     type: "work"
   },
   {
     title: "Desarrollador full stack",
     company: "Algorithm S.A.S",
     period: "Mar 2025 - Presente",
-    description: "Desarrollo de APIs REST con ASP.NET Core y aplicaciones frontend con Angular. Optimización de consultas SQL y mejora del rendimiento de aplicaciones existentes.",
+    description: "Actualmente desarrollo un software de analítica financiera que integra datos desde ERPs como Siesa, \
+                  NetSuite y SAP. El sistema procesa archivos Excel y los almacena en SQL Server, usando Angular en el \
+                  frontend y .NET Core con EF Core en el backend. También implemento seguridad y optimización para un rendimiento eficiente.",
     type: "work"
   },
 ];
@@ -58,7 +71,7 @@ const periodClassColor = (type: string) => {
       </p>
       <div>
         <Badge color="purple" >Estudio</Badge> 
-        <Badge color="blue">Trabajo</Badge>
+        <Badge color="blue">Experiencia</Badge>
       </div>
     </div>
     <div class="space-y-8">
@@ -69,11 +82,11 @@ const periodClassColor = (type: string) => {
                                 <h3 class="text-xl font-semibold text-slate-900 dark:text-white">
                                     {exp.title}
                                 </h3>
-                                <p class={`${companyClassColor(exp.type)} font-medium`}>
+                                <p class={`${companyClassColor(exp.type)} font-medium mb-2`}>
                                     {exp.company}
                                 </p>
                             </div>
-                            <Badge color={periodClassColor(exp.type)} class="mt-2 md:mt-0">
+                            <Badge color={periodClassColor(exp.type)} class="mt-2">
                                 {exp.period}
                             </Badge>
                         </div>
